@@ -18,10 +18,12 @@ RUN yum -y update; yum clean all; \
 
 # Install requirements.
 RUN yum makecache fast \
+ && yum -y update \
  && yum -y install deltarpm initscripts \
  && yum -y install \
       sudo \
       which \
+      ca-certificates \
  && yum clean all
 
 # Disable requiretty.
