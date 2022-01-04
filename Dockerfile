@@ -1,6 +1,7 @@
 FROM centos:7
 
 LABEL maintainer="mullholland"
+LABEL build_update="2022-01-04"
 
 ENV container=docker
 
