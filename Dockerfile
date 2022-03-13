@@ -25,6 +25,7 @@ RUN yum makecache fast \
       sudo \
       which \
       ca-certificates \
+      iproute \
  && yum clean all
 
 # Disable requiretty.
