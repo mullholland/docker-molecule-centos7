@@ -35,8 +35,6 @@ docker-test:
       --pull
       --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
       .
-    # Verify systemctl in the built image.
-    - docker run --name test-container --rm $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA systemctl --version
     # Push image if test ist successful
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
 
